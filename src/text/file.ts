@@ -4,10 +4,10 @@ import { GROUP_ID } from '../env';
 
 const debug = createDebug('bot:file_text');
 
-export const file = () => async (ctx: Filter<Context, 'message'>) => {
+export const file = () => async (ctx: Filter<Context, 'message:file'>) => {
   debug('Triggered "file" text command');
-  await ctx.api.forwardMessage(GROUP_ID!, ctx.chat.id, ctx.message.message_id);
+  await ctx.api.forwardMessage(GROUP_ID!, ctx.chatId, ctx.msgId);
   await ctx.reply('Файл отправлен.', {
-    reply_parameters: { message_id: ctx.message.message_id },
+    reply_parameters: { message_id: ctx.msgId },
   });
 };
