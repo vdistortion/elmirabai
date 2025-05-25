@@ -42,7 +42,6 @@
     "typescript": "^5.8.3"
   },
   "scripts": {
-    "prepare": "cp -n .env.example .env",
     "dev": "DEBUG=bot* dotenv -- nodemon -e ts -x ts-node src/index.ts",
     "build": "ncc build src/index.ts -o public -m",
     "format": "prettier . --write",
