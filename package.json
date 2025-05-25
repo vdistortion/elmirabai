@@ -1,0 +1,51 @@
+{
+  "name": "elmira_bai_bot",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "description": "ElmiraBaiBot",
+  "main": "src/index.ts",
+  "author": "Valentin (https://github.com/vdistortion)",
+  "homepage": "https://github.com/vdistortion/elmira_bai_bot",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vdistortion/elmira_bai_bot.git"
+  },
+  "contributors": [
+    {
+      "name": "Mark Pavlov",
+      "url": "https://github.com/sollidy"
+    },
+    {
+      "name": "Валентин",
+      "url": "https://github.com/vdistortion"
+    }
+  ],
+  "keywords": [
+    "grammy",
+    "telegram",
+    "bot"
+  ],
+  "dependencies": {
+    "grammy": "^1.36.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/node": "^22.15.18",
+    "@vercel/ncc": "^0.38.3",
+    "@vercel/node": "^5.1.16",
+    "debug": "^4.4.1",
+    "dotenv-cli": "^8.0.0",
+    "nodemon": "^3.1.10",
+    "prettier": "3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "prepare": "cp -n .env.example .env",
+    "dev": "DEBUG=bot* dotenv -- nodemon -e ts -x ts-node src/index.ts",
+    "build": "ncc build src/index.ts -o public -m",
+    "format": "prettier . --write",
+    "lint": "tsc --noemit"
+  }
+}
