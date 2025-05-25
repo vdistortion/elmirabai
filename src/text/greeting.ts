@@ -1,13 +1,18 @@
 import type { Context, Filter } from 'grammy';
 import createDebug from 'debug';
-import { GROUP_ID } from '../env';
+import { forwardMessageByGroupId } from '../utils';
 
 const debug = createDebug('bot:greeting_text');
 
 export const greeting = () => async (ctx: Filter<Context, 'message:text'>) => {
   debug('Triggered "greeting" text command');
-  await ctx.api.forwardMessage(GROUP_ID!, ctx.chatId, ctx.msgId);
-  await ctx.reply('Сообщение отправлено.', {
+  let message = 'Сообщение отправлено';
+  try {
+    await forwardMessageByGroupId(ctx, ctx.chatId, ctx.msgId);
+  } catch (err: any) {
+    message = `Сообщение не отправлено, возможно бот не состоит в группе.\n\nError: ${err.message}`;
+  }
+  await ctx.reply(message, {
     reply_parameters: { message_id: ctx.msgId },
   });
 };

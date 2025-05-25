@@ -3,8 +3,8 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { commands, development, production } from './core';
 import { start, id } from './commands';
 import { file, greeting } from './text';
-import { GROUP_ID, NODE_ENV, TELEGRAM_BOT_TOKEN } from './env';
-import { getPathToAssets, replaceAll } from './utils';
+import { NODE_ENV, TELEGRAM_BOT_TOKEN } from './env';
+import { forwardMessageByGroupId, getPathToAssets, replaceAll } from './utils';
 
 export const bot = new Bot(TELEGRAM_BOT_TOKEN!);
 
@@ -78,8 +78,13 @@ bot.callbackQuery('course_2', async (ctx) => {
 
 bot.callbackQuery(/^offline_buy\|/, async (ctx) => {
   const [_, chatId, messageId] = ctx.callbackQuery.data.split('|');
-  await ctx.api.forwardMessage(GROUP_ID!, chatId, Number(messageId));
-  await ctx.reply('Заявка отправлена', {
+  let message = 'Заявка отправлена';
+  try {
+    await forwardMessageByGroupId(ctx, chatId, messageId);
+  } catch (err: any) {
+    message = `Заявка не отправлена, возможно бот не состоит в группе.\n\nError: ${err.message}`;
+  }
+  await ctx.reply(message, {
     reply_parameters: { message_id: Number(messageId) },
   });
   await ctx.answerCallbackQuery();
