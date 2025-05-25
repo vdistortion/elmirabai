@@ -1,4 +1,4 @@
-import { Bot, webhookCallback } from 'grammy';
+import { Bot, GrammyError, HttpError, webhookCallback } from 'grammy';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { commands, development, production } from './core';
 import { start, id } from './commands';
@@ -87,6 +87,19 @@ bot.callbackQuery(/^offline_buy\|/, async (ctx) => {
 
 bot.on('message:file', file());
 bot.on('message:text', greeting());
+
+bot.catch((err) => {
+  const ctx = err.ctx;
+  console.error(`Error while handling update ${ctx.update.update_id}:`);
+  const e = err.error;
+  if (e instanceof GrammyError) {
+    console.error('Error in request:', e.description);
+  } else if (e instanceof HttpError) {
+    console.error('Could not contact Telegram:', e);
+  } else {
+    console.error('Unknown error:', e);
+  }
+});
 
 //prod mode (Vercel)
 export const startVercel = async (req: VercelRequest, res: VercelResponse) => {
