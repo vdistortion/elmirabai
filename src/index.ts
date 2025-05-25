@@ -11,7 +11,7 @@ export const bot = new Bot(TELEGRAM_BOT_TOKEN!);
 bot.command('start', start());
 bot.command('id', id());
 
-bot.hears(commands.online, async (ctx) => {
+bot.hears(commands?.online, async (ctx) => {
   await ctx.replyWithPhoto(getPathToAssets(`images/temp.webp`), {
     caption: 'Описание первого курса...\n\nОписание второго курса...',
     reply_markup: {
@@ -25,9 +25,9 @@ bot.hears(commands.online, async (ctx) => {
   });
 });
 
-bot.hears(commands.offline, async (ctx) => {
+bot.hears(commands?.offline, async (ctx) => {
   await ctx.reply(
-    replaceAll(`Описание кнопки ${commands.offline}
+    replaceAll(`Описание кнопки ${commands?.offline}
 Оффлайн-занятие проходят в самом лучшем городе по самой лучшей цене!
 Стоимость 4000₽ за 3 занятия.
 Покупка возможна по абонементу ||АБОНЕМЕНТ||
