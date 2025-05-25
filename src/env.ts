@@ -1,0 +1,2 @@
+export const { TELEGRAM_BOT_TOKEN, GROUP_ID, NODE_ENV, VERCEL_PROJECT_PRODUCTION_URL } =
+  process.env;
