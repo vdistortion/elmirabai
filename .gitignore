@@ -1,0 +1,18 @@
+# IDEs and editors
+/.idea
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/public/index.js
+
+# misc
+.DS_Store
+.env*
+!.env.example
+
+npm-debug.log*
