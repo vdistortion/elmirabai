@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Analytics } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-about',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './about.scss'
 })
 export class About {
+  analytics = inject(Analytics);
 
+  onClick(event: string) {
+    this.analytics.sendEvent(event, { category: 'UI' });
+  }
 }
