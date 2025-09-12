@@ -1,0 +1,30 @@
+.gallery {
+  margin-bottom: 14px;
+
+  &__title {
+    text-align: center;
+    padding: 7px 0 14px;
+  }
+
+  &__item {
+    background-color: #E9ECEF;
+  }
+
+  &__item + &__item {
+    margin-top: 14px;
+  }
+
+  &__content {
+    padding: 14px;
+  }
+
+  &__content-title {
+    color: #000000;
+    font-size: 17px;
+  }
+
+  &__content-text {
+    margin-top: 7px;
+    font-size: 15px;
+  }
+}

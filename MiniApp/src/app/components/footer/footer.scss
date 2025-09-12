@@ -1,0 +1,37 @@
+.footer {
+  background-color: #dd8b9c;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 28px;
+
+  h3 {
+    font-weight: 400;
+    padding: 14px 7px;
+
+    &:first-child {
+      padding: 14px 0;
+    }
+  }
+
+  &__social {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #7d3c4a;
+    font-size: 30px;
+    line-height: 1;
+    color: #fff;
+    transition: opacity .1s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__social + &__social {
+    margin-left: 14px;
+  }
+}

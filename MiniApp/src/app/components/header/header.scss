@@ -1,0 +1,30 @@
+.header {
+  text-align: center;
+  padding: 14px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__about {
+    font-size: 20px;
+    padding-bottom: 7px;
+  }
+
+  &__description {
+    font-size: 14px;
+  }
+}
+
+h2 {
+  margin: 7px 20px;
+}
+
+img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin: 7px 0;
+}

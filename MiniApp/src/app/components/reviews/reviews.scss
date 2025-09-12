@@ -1,0 +1,20 @@
+.reviews {
+  margin: 14px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__video {
+    display: inline-block;
+    width: 100%;
+    max-width: 375px;
+    aspect-ratio: 125 / 222;
+  }
+}
+
+h3 {
+  padding-bottom: 14px;
+}

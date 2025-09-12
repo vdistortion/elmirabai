@@ -1,0 +1,66 @@
+.price {
+  background-color: #7d3c4a;
+  padding: 14px;
+  text-align: center;
+
+  &__video {
+    display: inline-block;
+    width: 100%;
+    max-width: 375px;
+    aspect-ratio: 125 / 222;
+  }
+
+  &__list {
+    padding: 7px 0 14px;
+    display: flex;
+    gap: 14px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 14px;
+  }
+
+  &__title {
+    font-family: "Merriweather", serif;
+    margin-top: 7px;
+    font-size: 24px;
+  }
+
+  &__sum {
+    font-family: "Merriweather", serif;
+    margin-top: 21px;
+    font-size: 30px;
+  }
+
+  &__description {
+    margin-top: 21px;
+    font-size: 17px;
+  }
+
+  &__result {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 21px 0 7px;
+  }
+
+  &__result-list {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  &__result-item {
+    font-size: 17px;
+  }
+
+  &__result-item + &__result-item {
+    margin-top: 5px;
+  }
+}

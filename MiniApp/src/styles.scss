@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F4D8DE;
+  color: #7d3c4a;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2, h3 {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  background-color: #000
+}
+
+.wrapper {
+  max-width: 792px;
+  margin: 0 auto;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 56px 8px 8px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: opacity .1s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &--tg {
+    background-color: #61a8de;
+  }
+
+  &--ig {
+    background-color: #f00075;
+  }
+
+  &__icon {
+    font-size: 42px;
+  }
+
+  &__text {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
