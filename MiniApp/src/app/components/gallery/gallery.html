@@ -3,8 +3,13 @@
     <div class="gallery__wrapper">
       <h3>Галерея</h3>
       <div class="gallery__title">Отзывы учениц:</div>
-      <div class="gallery__list">
-        <div class="gallery__item">
+      <swiper-container
+        appSwiper
+        [config]="options"
+        init="false"
+        class="gallery__list"
+      >
+        <swiper-slide class="gallery__item">
           <img src="images/63863963.jpg" alt="Отзывы учеников">
           <div class="gallery__content">
             <div class="gallery__content-title">Отзывы учеников💗</div>
@@ -12,15 +17,15 @@
               Девушки доверились мне и получили гармон счастья, владение телом и соприкоснулись с одним из самых женственных танцев.♥️ Нежные и эффектные движения ориентального танца передают всю его изящность и красоту женщин!
             </div>
           </div>
-        </div>
-        <div class="gallery__item">
+        </swiper-slide>
+        <swiper-slide class="gallery__item">
           <img src="images/63903417.jpg" alt="София">
           <div class="gallery__content">
             <div class="gallery__content-title">Отзыв от Софии</div>
             <div class="gallery__content-text">София освоила базу восточного танца, смогла научится управлять своим телом и в целом получила большое удовольствие от занятия! </div>
           </div>
-        </div>
-      </div>
+        </swiper-slide>
+      </swiper-container>
     </div>
   </div>
 </div>

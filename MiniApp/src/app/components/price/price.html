@@ -8,43 +8,54 @@
           allowfullscreen
         ></iframe>
       </div>
-      <div class="price__list">
-        <div class="price__item">
-          <div class="price__title">Тариф "Кошечка"</div>
-          <div class="price__sum">8 000.00 ₽</div>
-          <div class="price__description">
-            Онлайн уроки в записи: 3 теоретических мини блока по 3−5 минут и 3 танца (разбор каждого танца около 25мин.) Эфир с психологом на тему курса и возможность задать вопросы.Чат с участниками, эксклюзивными материалами и музыкой. Проверка дз от Эльмиры.
-          </div>
-          <div class="price__result">Что ты получишь:</div>
-          <ul class="price__result-list">
-            <li class="price__result-item">Знание о правильной постановке корпуса, основы модельного дефиле и позирования</li>
-            <li class="price__result-item">Улучшение пластики и женственности, раскрепощение, навык управлять своим телом</li>
-            <li class="price__result-item">Доступ к видеоурокам и 3 танца до конца курса к экслюзивному чату и обратную связь от Эльмиры</li>
-            <li class="price__result-item">Эфир с психологом и мои рекомендации помогут в снятии блоков и страхов самовыражения </li>
-            <li class="price__result-item">Знание базы восточных движений и движений из других стилей.</li>
-            <li class="price__result-item">Сможешь танцевать на вечеринке,для второй половинке, для публики</li>
-            <li class="price__result-item">Скидки на офлайн мероприятия с Эльмирой ,Скидка на танц.одежду и аксессуары</li>
-            <li class="price__result-item">Длительность доступа к курсу- 1 месяц и 1 неделю с возможностью продлить один раз на 1 неделю за 500р.</li>
-          </ul>
+    </div>
+  </div>
+  <div class="wrapper">
+    <swiper-container
+      appSwiper
+      class="price__list"
+      [config]="options"
+      init="false"
+    >
+      <swiper-slide class="price__item">
+        <div class="price__title">Тариф "Кошечка"</div>
+        <div class="price__sum">8 000.00 ₽</div>
+        <div class="price__description">
+          Онлайн уроки в записи: 3 теоретических мини блока по 3−5 минут и 3 танца (разбор каждого танца около 25мин.) Эфир с психологом на тему курса и возможность задать вопросы.Чат с участниками, эксклюзивными материалами и музыкой. Проверка дз от Эльмиры.
         </div>
-        <div class="price__item">
-          <div class="price__title">Тариф "Женственная пантера"</div>
-          <div class="price__sum">10 000.00 ₽</div>
-          <div class="price__description">
-            Тоже что и в базовом тарифе +
-            <br>
-            Возможность занятий ,отработка с Эльмирой онлайн на персональных занятиях (кол-во по договоренности). Урок по растяжке около 30 минут от квалиф. специалиста. Гайд от нутрициолога по питанию.
-          </div>
-          <div class="price__result">Что в результате:</div>
-          <ul class="price__result-list">
-            <li class="price__result-item">Персональный подход от Эльмиры и ускоренное получение результата</li>
-            <li class="price__result-item">Раскрытие женственности и уверенности , урок базовой растяжки тела</li>
-            <li class="price__result-item">Быстрая обратная связь и коррекция</li>
-            <li class="price__result-item">Скидки, подарки, рекомендации и помощь с восточным костюмом, аксессуарами </li>
-            <li class="price__result-item">Доступ к курсу на 1,5 месяца</li>
-          </ul>
+        <div class="price__result">Что ты получишь:</div>
+        <ul class="price__result-list">
+          <li class="price__result-item">Знание о правильной постановке корпуса, основы модельного дефиле и позирования</li>
+          <li class="price__result-item">Улучшение пластики и женственности, раскрепощение, навык управлять своим телом</li>
+          <li class="price__result-item">Доступ к видеоурокам и 3 танца до конца курса к экслюзивному чату и обратную связь от Эльмиры</li>
+          <li class="price__result-item">Эфир с психологом и мои рекомендации помогут в снятии блоков и страхов самовыражения </li>
+          <li class="price__result-item">Знание базы восточных движений и движений из других стилей.</li>
+          <li class="price__result-item">Сможешь танцевать на вечеринке,для второй половинке, для публики</li>
+          <li class="price__result-item">Скидки на офлайн мероприятия с Эльмирой ,Скидка на танц.одежду и аксессуары</li>
+          <li class="price__result-item">Длительность доступа к курсу- 1 месяц и 1 неделю с возможностью продлить один раз на 1 неделю за 500р.</li>
+        </ul>
+      </swiper-slide>
+      <swiper-slide class="price__item">
+        <div class="price__title">Тариф "Женственная пантера"</div>
+        <div class="price__sum">10 000.00 ₽</div>
+        <div class="price__description">
+          Тоже что и в базовом тарифе +
+          <br>
+          Возможность занятий ,отработка с Эльмирой онлайн на персональных занятиях (кол-во по договоренности). Урок по растяжке около 30 минут от квалиф. специалиста. Гайд от нутрициолога по питанию.
         </div>
-      </div>
+        <div class="price__result">Что в результате:</div>
+        <ul class="price__result-list">
+          <li class="price__result-item">Персональный подход от Эльмиры и ускоренное получение результата</li>
+          <li class="price__result-item">Раскрытие женственности и уверенности , урок базовой растяжки тела</li>
+          <li class="price__result-item">Быстрая обратная связь и коррекция</li>
+          <li class="price__result-item">Скидки, подарки, рекомендации и помощь с восточным костюмом, аксессуарами </li>
+          <li class="price__result-item">Доступ к курсу на 1,5 месяца</li>
+        </ul>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <div class="wrapper">
+    <div class="price__wrapper">
       <a class="btn btn--tg" href="tg://resolve?domain=ElmiraBai1" (click)="onClick('buy_click')">
         <fa-icon class="btn__icon" [icon]="faTelegram"></fa-icon>
         <div class="btn__text">Хочу купить</div>

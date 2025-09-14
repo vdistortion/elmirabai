@@ -1,6 +1,10 @@
 .gallery {
   margin-bottom: 14px;
 
+  swiper-container {
+    --swiper-navigation-color: #7d3c4a;
+  }
+
   &__title {
     text-align: center;
     padding: 7px 0 14px;
