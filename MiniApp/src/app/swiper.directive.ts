@@ -2,7 +2,7 @@ import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
 import type { SwiperOptions } from 'swiper/types';
 
 @Directive({
-  selector: '[appSwiper]'
+  selector: '[appSwiper]',
 })
 export class SwiperDirective implements AfterViewInit {
   private readonly swiperElement: HTMLElement;

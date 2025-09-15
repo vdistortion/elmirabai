@@ -7,7 +7,7 @@ declare global {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Analytics {
   sendYMEvent(eventName: string, params?: { [key: string]: any }) {

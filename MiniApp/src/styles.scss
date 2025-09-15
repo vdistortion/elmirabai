@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #F4D8DE;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4d8de;
   color: #7d3c4a;
   margin: 0;
 }
@@ -12,8 +12,9 @@ img {
   max-width: 100%;
 }
 
-h2, h3 {
-  font-family: "Merriweather", serif;
+h2,
+h3 {
+  font-family: 'Merriweather', serif;
   text-align: center;
   margin: 0;
 }
@@ -29,7 +30,7 @@ h3 {
 iframe {
   width: 100%;
   height: 100%;
-  background-color: #000
+  background-color: #000;
 }
 
 .wrapper {
@@ -52,7 +53,7 @@ iframe {
   padding: 8px 56px 8px 8px;
   box-sizing: border-box;
   border-radius: 10px;
-  transition: opacity .1s;
+  transition: opacity 0.1s;
 
   &:hover {
     opacity: 0.9;

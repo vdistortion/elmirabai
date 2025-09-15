@@ -5,7 +5,7 @@ import { Analytics } from '../../services/analytics.service';
   selector: 'app-about',
   imports: [],
   templateUrl: './about.html',
-  styleUrl: './about.scss'
+  styleUrl: './about.scss',
 })
 export class About {
   analytics = inject(Analytics);

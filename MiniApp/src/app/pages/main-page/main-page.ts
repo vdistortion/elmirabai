@@ -10,19 +10,8 @@ import { Course } from '../../components/course/course';
 
 @Component({
   selector: 'app-main-page',
-  imports: [
-    Header,
-    Footer,
-    Description,
-    Gallery,
-    Price,
-    About,
-    Reviews,
-    Course
-  ],
+  imports: [Header, Footer, Description, Gallery, Price, About, Reviews, Course],
   templateUrl: './main-page.html',
-  styleUrl: './main-page.scss'
+  styleUrl: './main-page.scss',
 })
-export class MainPage {
-
-}
+export class MainPage {}

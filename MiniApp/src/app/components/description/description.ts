@@ -5,11 +5,9 @@ import { Analytics } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-description',
-  imports: [
-    FaIconComponent
-  ],
+  imports: [FaIconComponent],
   templateUrl: './description.html',
-  styleUrl: './description.scss'
+  styleUrl: './description.scss',
 })
 export class Description {
   protected readonly faTelegram = faTelegram;

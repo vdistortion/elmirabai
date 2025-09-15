@@ -5,11 +5,9 @@ import { Analytics } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-footer',
-  imports: [
-    FaIconComponent
-  ],
+  imports: [FaIconComponent],
   templateUrl: './footer.html',
-  styleUrl: './footer.scss'
+  styleUrl: './footer.scss',
 })
 export class Footer {
   faInstagram = faInstagram;
