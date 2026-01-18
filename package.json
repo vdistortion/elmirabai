@@ -1,51 +1,55 @@
 {
-  "name": "elmira_bai_bot",
+  "name": "elmirabai",
   "version": "0.0.1",
-  "private": true,
-  "license": "MIT",
-  "description": "ElmiraBaiBot",
-  "main": "src/index.ts",
-  "author": "Valentin (https://github.com/vdistortion)",
-  "homepage": "https://github.com/vdistortion/elmira_bai_bot",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:vdistortion/elmira_bai_bot.git"
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "public": "ng build --base-href /elmirabai/ && cd dist/elmirabai/browser && cp index.html 404.html && gh-pages -d .",
+    "format": "prettier . --write",
+    "test": "ng test"
   },
-  "contributors": [
-    {
-      "name": "Mark Pavlov",
-      "url": "https://github.com/sollidy"
-    },
-    {
-      "name": "Валентин",
-      "url": "https://github.com/vdistortion"
-    }
-  ],
-  "keywords": [
-    "grammy",
-    "telegram",
-    "bot"
-  ],
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
   "dependencies": {
-    "grammy": "^1.36.1"
+    "@angular/common": "^20.3.0",
+    "@angular/compiler": "^20.3.0",
+    "@angular/core": "^20.3.0",
+    "@angular/forms": "^20.3.0",
+    "@angular/platform-browser": "^20.3.0",
+    "@angular/router": "^20.3.0",
+    "@fortawesome/angular-fontawesome": "^3.0.0",
+    "@fortawesome/free-brands-svg-icons": "^7.0.1",
+    "rxjs": "~7.8.0",
+    "swiper": "^12.0.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@types/debug": "^4.1.12",
-    "@types/node": "^22.15.18",
-    "@vercel/ncc": "^0.38.3",
-    "@vercel/node": "^5.1.16",
-    "debug": "^4.4.1",
-    "dotenv-cli": "^8.0.0",
-    "nodemon": "^3.1.10",
-    "prettier": "3.5.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  },
-  "scripts": {
-    "prepare": "cp -n .env.example .env",
-    "dev": "DEBUG=bot* dotenv -- nodemon -e ts -x ts-node src/index.ts",
-    "build": "ncc build src/index.ts -o public -m",
-    "format": "prettier . --write",
-    "lint": "tsc --noemit"
+    "@angular/build": "^20.3.1",
+    "@angular/cli": "^20.3.1",
+    "@angular/compiler-cli": "^20.3.0",
+    "@types/jasmine": "~5.1.0",
+    "gh-pages": "^6.3.0",
+    "jasmine-core": "~5.9.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "3.6.2",
+    "typescript": "~5.9.2"
   }
 }
