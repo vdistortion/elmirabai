@@ -10,11 +10,11 @@ import { Analytics } from '../../services/analytics.service';
   styleUrl: './footer.scss',
 })
 export class Footer {
-  faInstagram = faInstagram;
-  faVk = faVk;
-  faTiktok = faTiktok;
-  faTelegram = faTelegram;
-  analytics = inject(Analytics);
+  protected readonly faInstagram = faInstagram;
+  protected readonly faVk = faVk;
+  protected readonly faTiktok = faTiktok;
+  protected readonly faTelegram = faTelegram;
+  private analytics = inject(Analytics);
 
   onClick(event: string) {
     this.analytics.sendEvent(event, { category: 'UI' });

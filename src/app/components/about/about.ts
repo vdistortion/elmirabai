@@ -8,7 +8,7 @@ import { Analytics } from '../../services/analytics.service';
   styleUrl: './about.scss',
 })
 export class About {
-  analytics = inject(Analytics);
+  private analytics = inject(Analytics);
 
   onClick(event: string) {
     this.analytics.sendEvent(event, { category: 'UI' });

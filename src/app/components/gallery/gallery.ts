@@ -11,7 +11,7 @@ import { SwiperDirective } from '../../swiper.directive';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Gallery {
-  options: SwiperOptions = {
+  protected options: SwiperOptions = {
     modules: [Navigation],
     slidesPerView: 1,
     navigation: true,

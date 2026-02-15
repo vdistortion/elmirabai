@@ -12,7 +12,7 @@ import { Analytics } from '../../services/analytics.service';
 export class Description {
   protected readonly faTelegram = faTelegram;
   protected readonly faInstagram = faInstagram;
-  analytics = inject(Analytics);
+  private analytics = inject(Analytics);
 
   onClick(event: string) {
     this.analytics.sendEvent(event, { category: 'UI' });

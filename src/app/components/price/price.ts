@@ -13,9 +13,9 @@ import { SwiperDirective } from '../../swiper.directive';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Price {
-  faTelegram = faTelegram;
-  analytics = inject(Analytics);
-  options: SwiperOptions = {
+  protected readonly faTelegram = faTelegram;
+  private analytics = inject(Analytics);
+  protected options: SwiperOptions = {
     slidesPerView: 1.2,
     spaceBetween: 7,
     slidesOffsetBefore: 14,
