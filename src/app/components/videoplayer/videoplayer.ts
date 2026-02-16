@@ -29,12 +29,12 @@ export class Videoplayer {
   private readonly _document = inject(DOCUMENT);
   private readonly _window = this._document.defaultView as any;
 
-  videoId = input.required<number>();
-  oid = input<number>(-73968175);
+  public videoId = input.required<number>();
+  public oid = input<number>(-73968175);
 
   private iframe = viewChild<ElementRef<HTMLIFrameElement>>('videoplayer');
 
-  safeUrl = computed(() => {
+  protected safeUrl = computed(() => {
     const url = `https://vk.com/video_ext.php?oid=${this.oid()}&id=${this.videoId()}&hd=2&autoplay=1&loop=1&js_api=1`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   });

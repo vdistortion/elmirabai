@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { TrackClickDirective } from '../../track-click.directive';
 
 @Component({
   selector: 'app-description',
-  imports: [FaIconComponent, TrackClickDirective],
+  imports: [NgOptimizedImage, FaIconComponent, TrackClickDirective],
   templateUrl: './description.html',
   styleUrl: './description.scss',
 })
