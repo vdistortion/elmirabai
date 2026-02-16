@@ -53,10 +53,6 @@ export class Videoplayer {
       player.on('inited', () => {
         player.mute();
       });
-
-      player.on('volumechange', () => {
-        player.mute();
-      });
     }
   }
 }
