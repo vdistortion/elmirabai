@@ -7,28 +7,32 @@
         <a
           class="footer__social"
           href="https://instagram.com/elmira__bai/"
-          (click)="onClick('instagram_contacts_click')"
+          target="_blank"
+          appTrackClick="instagram_contacts_click"
         >
           <fa-icon [icon]="faInstagram"></fa-icon>
         </a>
         <a
           class="footer__social"
           href="https://vk.com/clubbelmirab"
-          (click)="onClick('vk_contacts_click')"
+          target="_blank"
+          appTrackClick="vk_contacts_click"
         >
           <fa-icon [icon]="faVk"></fa-icon>
         </a>
         <a
           class="footer__social"
           href="https://www.tiktok.com/@elmiraboom"
-          (click)="onClick('tiktok_contacts_click')"
+          target="_blank"
+          appTrackClick="tiktok_contacts_click"
         >
           <fa-icon [icon]="faTiktok"></fa-icon>
         </a>
         <a
           class="footer__social"
           href="tg://resolve?domain=ElmiraBai1"
-          (click)="onClick('telegram_contacts_click')"
+          target="_blank"
+          appTrackClick="telegram_contacts_click"
         >
           <fa-icon [icon]="faTelegram"></fa-icon>
         </a>

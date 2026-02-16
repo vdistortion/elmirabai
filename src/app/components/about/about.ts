@@ -1,16 +1,10 @@
-import { Component, inject } from '@angular/core';
-import { Analytics } from '../../services/analytics.service';
+import { Component } from '@angular/core';
+import { TrackClickDirective } from '../../track-click.directive';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [TrackClickDirective],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-export class About {
-  private analytics = inject(Analytics);
-
-  onClick(event: string) {
-    this.analytics.sendEvent(event, { category: 'UI' });
-  }
-}
+export class About {}

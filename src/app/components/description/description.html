@@ -29,7 +29,8 @@
       <a
         class="btn btn--tg"
         href="tg://resolve?domain=ElmiraBai1"
-        (click)="onClick('telegram_click')"
+        target="_blank"
+        appTrackClick="telegram_click"
       >
         <fa-icon class="btn__icon" [icon]="faTelegram"></fa-icon>
         <div class="btn__text">Узнать больше/купить</div>
@@ -37,7 +38,8 @@
       <a
         class="btn btn--ig"
         href="https://instagram.com/elmira__bai/"
-        (click)="onClick('instagram_click')"
+        target="_blank"
+        appTrackClick="instagram_click"
       >
         <fa-icon class="btn__icon" [icon]="faInstagram"></fa-icon>
         <div class="btn__text">Инстаграм</div>

@@ -73,7 +73,12 @@
   </div>
   <div class="wrapper">
     <div class="price__wrapper">
-      <a class="btn btn--tg" href="tg://resolve?domain=ElmiraBai1" (click)="onClick('buy_click')">
+      <a
+        class="btn btn--tg"
+        href="tg://resolve?domain=ElmiraBai1"
+        target="_blank"
+        appTrackClick="buy_click"
+      >
         <fa-icon class="btn__icon" [icon]="faTelegram"></fa-icon>
         <div class="btn__text">Хочу купить</div>
       </a>
