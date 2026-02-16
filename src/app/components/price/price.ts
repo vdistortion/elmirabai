@@ -2,12 +2,13 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import type { SwiperOptions } from 'swiper/types';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { Videoplayer } from '../videoplayer/videoplayer';
 import { Analytics } from '../../services/analytics.service';
 import { SwiperDirective } from '../../swiper.directive';
 
 @Component({
   selector: 'app-price',
-  imports: [FaIconComponent, SwiperDirective],
+  imports: [FaIconComponent, SwiperDirective, Videoplayer],
   templateUrl: './price.html',
   styleUrl: './price.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Videoplayer } from '../videoplayer/videoplayer';
 
 @Component({
   selector: 'app-reviews',
-  imports: [],
+  imports: [Videoplayer],
   templateUrl: './reviews.html',
   styleUrl: './reviews.scss',
 })
