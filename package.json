@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "serve:ssr:elmirabai": "node dist/elmirabai/server/server.mjs",
-    "public": "ng build --base-href /elmirabai/ && cd dist/elmirabai/browser && cp index.html 404.html && gh-pages -d .",
+    "public": "ng build && cd dist/elmirabai/browser && cp index.html 404.html && gh-pages -d . --cname elmirabai.ru",
     "format": "prettier . --write",
     "test": "ng test"
   },
