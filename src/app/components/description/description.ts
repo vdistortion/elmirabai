@@ -3,6 +3,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { TrackClickDirective } from '../../track-click.directive';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-description',
@@ -13,4 +14,5 @@ import { TrackClickDirective } from '../../track-click.directive';
 export class Description {
   protected readonly faTelegram = faTelegram;
   protected readonly faInstagram = faInstagram;
+  protected readonly environment = environment;
 }

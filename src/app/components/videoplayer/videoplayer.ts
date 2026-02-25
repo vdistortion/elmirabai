@@ -9,6 +9,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
 
 declare global {
   interface Window {
@@ -30,7 +31,7 @@ export class Videoplayer {
   private readonly _window = this._document.defaultView as any;
 
   public videoId = input.required<number>();
-  public oid = input<number>(-73968175);
+  public oid = input<number>(environment.oid);
 
   private iframe = viewChild<ElementRef<HTMLIFrameElement>>('videoplayer');
 

@@ -6,7 +6,7 @@
       <div class="footer__list">
         <a
           class="footer__social"
-          href="https://instagram.com/elmira__bai/"
+          [href]="environment.contacts.instagram"
           target="_blank"
           appTrackClick="instagram_contacts_click"
         >
@@ -14,7 +14,7 @@
         </a>
         <a
           class="footer__social"
-          href="https://vk.com/clubbelmirab"
+          [href]="environment.contacts.vk"
           target="_blank"
           appTrackClick="vk_contacts_click"
         >
@@ -22,7 +22,7 @@
         </a>
         <a
           class="footer__social"
-          href="https://www.tiktok.com/@elmiraboom"
+          [href]="environment.contacts.tiktok"
           target="_blank"
           appTrackClick="tiktok_contacts_click"
         >
@@ -30,7 +30,7 @@
         </a>
         <a
           class="footer__social"
-          href="tg://resolve?domain=ElmiraBai1"
+          [href]="environment.contacts.tg"
           target="_blank"
           appTrackClick="telegram_contacts_click"
         >

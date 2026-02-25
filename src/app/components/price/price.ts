@@ -5,6 +5,7 @@ import { faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { Videoplayer } from '../videoplayer/videoplayer';
 import { SwiperDirective } from '../../swiper.directive';
 import { TrackClickDirective } from '../../track-click.directive';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-price',
@@ -15,6 +16,7 @@ import { TrackClickDirective } from '../../track-click.directive';
 })
 export class Price {
   protected readonly faTelegram = faTelegram;
+  protected readonly environment = environment;
   protected options: SwiperOptions = {
     slidesPerView: 1.2,
     spaceBetween: 7,
