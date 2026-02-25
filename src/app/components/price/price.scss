@@ -1,18 +1,18 @@
 .price {
-  background-color: #7d3c4a;
+  background-color: var(--color-primary);
   text-align: center;
   overflow: hidden;
 
   &__wrapper {
-    padding: 14px 0;
+    padding: var(--spacing-sm) 0;
 
     @media (max-width: 768px) {
-      padding: 14px;
+      padding: var(--spacing-sm);
     }
   }
 
   &__list {
-    padding: 7px 0 14px;
+    padding: var(--spacing-xs) 0 var(--spacing-sm);
   }
 
   &__item {
@@ -20,33 +20,33 @@
     grid-template-rows: 0.5fr 0.5fr 2fr 0.5fr 7fr;
     height: auto;
     text-align: left;
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 14px;
+    background-color: var(--color-white);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm);
     box-sizing: border-box;
   }
 
   &__title {
-    font-family: 'Merriweather', serif;
-    margin-top: 7px;
+    font-family: var(--font-serif), serif;
+    margin-top: var(--spacing-xs);
     font-size: 24px;
   }
 
   &__sum {
-    font-family: 'Merriweather', serif;
-    margin-top: 21px;
+    font-family: var(--font-serif), serif;
+    margin-top: var(--spacing-md);
     font-size: 30px;
   }
 
   &__description {
-    margin-top: 21px;
+    margin-top: var(--spacing-md);
     font-size: 17px;
   }
 
   &__result {
     font-size: 17px;
     font-weight: 700;
-    margin: 21px 0 7px;
+    margin: var(--spacing-md) 0 var(--spacing-xs);
   }
 
   &__result-list {
@@ -58,7 +58,7 @@
     font-size: 17px;
 
     &::marker {
-      font-family: 'Merriweather', serif;
+      font-family: var(--font-serif), serif;
       font-size: 14px;
     }
   }

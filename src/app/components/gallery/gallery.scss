@@ -1,13 +1,13 @@
 .gallery {
-  margin-bottom: 14px;
+  margin-bottom: var(--spacing-sm);
 
   swiper-container {
-    --swiper-navigation-color: #7d3c4a;
+    --swiper-navigation-color: var(--color-primary);
   }
 
   &__title {
     text-align: center;
-    padding: 7px 0 14px;
+    padding: var(--spacing-xs) 0 var(--spacing-sm);
   }
 
   &__item {
@@ -16,11 +16,11 @@
   }
 
   &__item + &__item {
-    margin-top: 14px;
+    margin-top: var(--spacing-sm);
   }
 
   &__content {
-    padding: 14px;
+    padding: var(--spacing-sm);
   }
 
   &__content-title {
@@ -29,7 +29,7 @@
   }
 
   &__content-text {
-    margin-top: 7px;
+    margin-top: var(--spacing-xs);
     font-size: 15px;
   }
 }

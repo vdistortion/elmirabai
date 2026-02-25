@@ -1,7 +1,22 @@
+:root {
+  --color-primary: #7d3c4a;
+  --color-bg: #f4d8de;
+  --color-accent-pink: #dd8b9c;
+  --color-text: #7d3c4a;
+  --color-white: #ffffff;
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --spacing-xs: 7px;
+  --spacing-sm: 14px;
+  --spacing-md: 21px;
+  --font-serif: 'Merriweather';
+  --font-sans: 'Open Sans';
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f4d8de;
-  color: #7d3c4a;
+  font-family: var(--font-sans), sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -13,7 +28,7 @@ img {
 h1,
 h2,
 h3 {
-  font-family: 'Merriweather', serif;
+  font-family: var(--font-serif), serif;
   text-align: center;
   margin: 0;
 }
@@ -38,7 +53,7 @@ iframe {
 }
 
 .btn {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -51,7 +66,7 @@ iframe {
   align-items: center;
   padding: 8px 56px 8px 8px;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   transition: opacity 0.1s;
 
   &:hover {

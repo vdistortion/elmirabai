@@ -1,6 +1,6 @@
 .header {
   text-align: center;
-  padding: 14px 0;
+  padding: var(--spacing-sm) 0;
 
   &__wrapper {
     display: flex;
@@ -10,7 +10,7 @@
 
   &__about {
     font-size: 20px;
-    padding-bottom: 7px;
+    padding-bottom: var(--spacing-xs);
   }
 
   &__description {
@@ -27,5 +27,5 @@ img {
   width: 95px;
   height: 95px;
   border-radius: 50%;
-  margin: 7px 0;
+  margin: var(--spacing-xs) 0;
 }

@@ -1,5 +1,5 @@
 .reviews {
-  margin: 14px 0;
+  margin: var(--spacing-sm) 0;
 
   &__wrapper {
     display: flex;
@@ -9,5 +9,5 @@
 }
 
 h3 {
-  padding-bottom: 14px;
+  padding-bottom: var(--spacing-sm);
 }

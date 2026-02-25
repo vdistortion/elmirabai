@@ -1,13 +1,13 @@
 .about {
-  padding: 14px 0;
+  padding: var(--spacing-sm) 0;
 
   &__wrapper {
     font-size: 0;
   }
 
   &__content {
-    background-color: #fff;
-    padding: 14px;
+    background-color: var(--color-white);
+    padding: var(--spacing-sm);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
@@ -16,7 +16,7 @@
   }
 
   &__description {
-    margin-top: 7px;
+    margin-top: var(--spacing-xs);
     font-size: 15px;
   }
 
@@ -28,11 +28,11 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #fff;
-    color: #7d3c4a;
+    background-color: var(--color-white);
+    color: var(--color-text);
   }
 }
 
 h3 {
-  padding-bottom: 14px;
+  padding-bottom: var(--spacing-sm);
 }
