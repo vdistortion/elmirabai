@@ -9,6 +9,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ScriptLoaderService } from '../../services/script-loader.service';
 import { environment } from '../../../environments/environment';
 
 declare global {
@@ -26,6 +27,7 @@ declare global {
   styleUrl: './videoplayer.scss',
 })
 export class Videoplayer {
+  private readonly loadScript = inject(ScriptLoaderService);
   private readonly sanitizer = inject(DomSanitizer);
   private readonly _document = inject(DOCUMENT);
   private readonly _window = this._document.defaultView as any;
@@ -42,7 +44,12 @@ export class Videoplayer {
 
   constructor() {
     afterNextRender(() => {
-      this.initPlayer();
+      this.loadScript
+        .load('https://vk.com/js/api/videoplayer.js')
+        .then(() => {
+          this.initPlayer();
+        })
+        .catch(console.error);
     });
   }
 
