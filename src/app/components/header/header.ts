@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -6,5 +6,6 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [NgOptimizedImage],
   templateUrl: './header.html',
   styleUrl: './header.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header {}

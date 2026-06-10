@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -6,5 +6,6 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [NgOptimizedImage],
   templateUrl: './course.html',
   styleUrl: './course.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Course {}

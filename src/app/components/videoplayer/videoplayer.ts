@@ -1,9 +1,10 @@
 import {
   afterNextRender,
+  ChangeDetectionStrategy,
   Component,
   computed,
   DOCUMENT,
-  ElementRef,
+  type ElementRef,
   inject,
   input,
   viewChild,
@@ -25,6 +26,7 @@ declare global {
   imports: [],
   templateUrl: './videoplayer.html',
   styleUrl: './videoplayer.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Videoplayer {
   private readonly loadScript = inject(ScriptLoaderService);

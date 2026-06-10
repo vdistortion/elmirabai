@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Videoplayer } from '../videoplayer/videoplayer';
 
 @Component({
@@ -6,5 +6,6 @@ import { Videoplayer } from '../videoplayer/videoplayer';
   imports: [Videoplayer],
   templateUrl: './reviews.html',
   styleUrl: './reviews.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Reviews {}

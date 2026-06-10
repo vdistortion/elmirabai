@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { Description } from '../../components/description/description';
@@ -13,5 +13,6 @@ import { Course } from '../../components/course/course';
   imports: [Header, Footer, Description, Gallery, Price, About, Reviews, Course],
   templateUrl: './main-page.html',
   styleUrl: './main-page.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainPage {}

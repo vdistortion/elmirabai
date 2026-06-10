@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { faInstagram, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { Icon } from '../icon/icon';
 import { TrackClickDirective } from '../../track-click.directive';
 import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-description',
-  imports: [NgOptimizedImage, FaIconComponent, TrackClickDirective],
+  imports: [NgOptimizedImage, TrackClickDirective, Icon],
   templateUrl: './description.html',
   styleUrl: './description.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Description {
-  protected readonly faTelegram = faTelegram;
-  protected readonly faInstagram = faInstagram;
   protected readonly environment = environment;
 }
