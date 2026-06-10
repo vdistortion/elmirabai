@@ -1,12 +1,12 @@
 <div class="description">
   <div class="wrapper">
     <div class="description__wrapper">
-      <h3>Танцуй и расцветай!</h3>
+      <h2 class="description__title">Танцуй и расцветай!</h2>
       <img
         ngSrc="images/63864120.webp"
         width="1080"
         height="1529"
-        priority
+        priority=""
         alt="Женственность через танец"
       />
       <div class="description__text">
@@ -36,7 +36,10 @@
         class="btn btn--tg"
         [href]="environment.contacts.tg"
         target="_blank"
+        aria-label="Telegram Эльмиры"
+        rel="noopener noreferrer"
         appTrackClick="telegram_click"
+        [eventParams]="{ placement: 'hero_description' }"
       >
         <app-icon class="btn__icon" icon="simple-icons:telegram"></app-icon>
         <div class="btn__text">Узнать больше/купить</div>
@@ -45,7 +48,10 @@
         class="btn btn--ig"
         [href]="environment.contacts.instagram"
         target="_blank"
+        aria-label="Instagram Эльмиры"
+        rel="noopener noreferrer"
         appTrackClick="instagram_click"
+        [eventParams]="{ placement: 'hero_description' }"
       >
         <app-icon class="btn__icon" icon="simple-icons:instagram"></app-icon>
         <div class="btn__text">Инстаграм</div>

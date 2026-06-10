@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Navigation } from 'swiper/modules';
 import type { SwiperOptions } from 'swiper/types';
@@ -10,7 +10,6 @@ import { SwiperDirective } from '../../swiper.directive';
   templateUrl: './gallery.html',
   styleUrl: './gallery.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Gallery {
   protected options: SwiperOptions = {

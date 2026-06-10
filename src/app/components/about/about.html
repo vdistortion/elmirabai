@@ -1,7 +1,7 @@
 <div class="about">
   <div class="wrapper">
     <div class="about__wrapper">
-      <h3>Об авторе курса</h3>
+      <h2>Об авторе курса</h2>
       <img ngSrc="images/63863547.webp" width="853" height="479" alt="Эльмира Байрамова" />
       <div class="about__content">
         <div class="about__name">Эльмира Байрамова</div>
@@ -17,7 +17,9 @@
         class="about__button"
         href="https://tapy.me/elmira"
         target="_blank"
+        rel="noopener noreferrer"
         appTrackClick="tapyme_click"
+        [eventParams]="{ placement: 'about_section' }"
       >
         Все соц.сети
       </a>

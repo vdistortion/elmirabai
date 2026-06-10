@@ -1,11 +1,5 @@
 import { DOCUMENT, inject, Injectable, InjectionToken } from '@angular/core';
 
-declare global {
-  interface Window {
-    ym?: Function;
-  }
-}
-
 export const ANALYTICS_CONFIG = new InjectionToken<{ ymId: number }>('AnalyticsConfig');
 
 @Injectable({

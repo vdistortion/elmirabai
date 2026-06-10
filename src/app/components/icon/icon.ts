@@ -1,10 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  CUSTOM_ELEMENTS_SCHEMA,
-  input,
-} from '@angular/core';
+import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, input } from '@angular/core';
 import 'iconify-icon';
 
 // https://icon-sets.iconify.design/
@@ -14,7 +8,6 @@ import 'iconify-icon';
   templateUrl: './icon.html',
   styleUrl: './icon.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Icon {
   icon = input.required<string>();

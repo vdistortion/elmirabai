@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { TrackClickDirective } from '../../track-click.directive';
 
@@ -7,6 +7,5 @@ import { TrackClickDirective } from '../../track-click.directive';
   imports: [NgOptimizedImage, TrackClickDirective],
   templateUrl: './about.html',
   styleUrl: './about.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class About {}

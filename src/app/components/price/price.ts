@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import type { SwiperOptions } from 'swiper/types';
 import { Videoplayer } from '../videoplayer/videoplayer';
+import { Icon } from '../icon/icon';
 import { SwiperDirective } from '../../swiper.directive';
 import { TrackClickDirective } from '../../track-click.directive';
 import { environment } from '../../../environments/environment';
-import { Icon } from '../icon/icon';
 
 @Component({
   selector: 'app-price',
@@ -12,7 +12,6 @@ import { Icon } from '../icon/icon';
   templateUrl: './price.html',
   styleUrl: './price.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Price {
   protected readonly environment = environment;

@@ -77,7 +77,10 @@
         class="btn btn--tg"
         [href]="environment.contacts.tg"
         target="_blank"
+        aria-label="Telegram Эльмиры"
+        rel="noopener noreferrer"
         appTrackClick="buy_click"
+        [eventParams]="{ placement: 'price_section' }"
       >
         <app-icon class="btn__icon" icon="simple-icons:telegram"></app-icon>
         <div class="btn__text">Хочу купить</div>

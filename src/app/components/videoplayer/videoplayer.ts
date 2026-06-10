@@ -1,6 +1,5 @@
 import {
   afterNextRender,
-  ChangeDetectionStrategy,
   Component,
   computed,
   DOCUMENT,
@@ -13,20 +12,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ScriptLoaderService } from '../../services/script-loader.service';
 import { environment } from '../../../environments/environment';
 
-declare global {
-  interface Window {
-    VK: {
-      VideoPlayer?: Function;
-    };
-  }
-}
-
 @Component({
   selector: 'app-videoplayer',
   imports: [],
   templateUrl: './videoplayer.html',
   styleUrl: './videoplayer.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Videoplayer {
   private readonly loadScript = inject(ScriptLoaderService);
