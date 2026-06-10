@@ -30,7 +30,7 @@ export class Videoplayer {
   private iframe = viewChild<ElementRef<HTMLIFrameElement>>('videoplayer');
 
   protected safeUrl = computed(() => {
-    const url = `https://vk.com/video_ext.php?oid=${this.oid()}&id=${this.videoId()}&hd=2&autoplay=1&loop=1&js_api=1`;
+    const url = `https://vk.com/video_ext.php?oid=${this.oid()}&id=${this.videoId()}&hd=2&autoplay=1&loop=1&mute=1&js_api=1`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   });
 
