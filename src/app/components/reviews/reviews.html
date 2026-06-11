@@ -2,7 +2,22 @@
   <div class="wrapper">
     <div class="reviews__wrapper">
       <h2>Отзывы</h2>
-      <app-videoplayer [videoId]="456239436"></app-videoplayer>
+      @defer (on viewport) {
+        <app-videoplayer [videoId]="456239436"></app-videoplayer>
+      } @placeholder {
+        <div
+          style="
+            max-width: 375px;
+            aspect-ratio: 125/222;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <span>Загрузка видео...</span>
+        </div>
+      }
     </div>
   </div>
 </div>

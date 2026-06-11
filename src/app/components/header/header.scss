@@ -1,6 +1,8 @@
+@use '../../mixins' as *;
+
 .header {
   text-align: center;
-  padding: var(--spacing-sm) 0;
+  padding: var(--space-4) 0;
 
   &__wrapper {
     display: flex;
@@ -9,23 +11,23 @@
   }
 
   &__about {
-    font-size: 20px;
-    padding-bottom: var(--spacing-xs);
+    @include body-text;
+    font-weight: 600;
+    padding-bottom: var(--space-2);
+  }
+
+  h1 {
+    @include heading-1;
+  }
+
+  &__portrait {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    margin: var(--space-3) 0;
   }
 
   &__description {
-    font-size: 14px;
+    @include body-text-small;
   }
-}
-
-h1 {
-  margin: 0;
-  font-size: 30px;
-}
-
-img {
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
-  margin: var(--spacing-xs) 0;
 }

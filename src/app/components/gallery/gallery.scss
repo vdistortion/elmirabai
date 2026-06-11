@@ -1,13 +1,20 @@
+@use '../../mixins' as *;
+
 .gallery {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--space-4);
+
+  h2 {
+    @include heading-2;
+    margin-bottom: var(--space-3);
+  }
+
+  h3 {
+    @include heading-3;
+    margin-bottom: var(--space-2);
+  }
 
   swiper-container {
     --swiper-navigation-color: var(--color-primary);
-  }
-
-  &__title {
-    text-align: center;
-    padding: var(--spacing-xs) 0 var(--spacing-sm);
   }
 
   &__item {
@@ -16,27 +23,20 @@
   }
 
   &__item + &__item {
-    margin-top: var(--spacing-sm);
+    margin-top: var(--space-4);
   }
 
   &__content {
-    padding: var(--spacing-sm);
+    padding: var(--space-4);
   }
 
   &__content-title {
-    color: #000000;
-    font-size: 17px;
+    @include body-text;
+    font-weight: 700;
   }
 
   &__content-text {
-    margin-top: var(--spacing-xs);
-    font-size: 15px;
+    @include body-text-small;
+    margin-top: var(--space-2);
   }
-}
-
-h2 {
-  font-family: var(--font-serif), serif;
-  text-align: center;
-  font-size: 24px;
-  margin: 0;
 }

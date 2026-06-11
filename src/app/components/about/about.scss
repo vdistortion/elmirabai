@@ -1,38 +1,49 @@
-.about {
-  padding: var(--spacing-sm) 0;
+@use '../../mixins' as *;
 
-  &__wrapper {
-    font-size: 0;
+.about {
+  padding: var(--space-4) 0;
+
+  h2 {
+    @include heading-2;
+    margin-bottom: var(--space-3);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   &__content {
     background-color: var(--color-white);
-    padding: var(--spacing-sm);
+    padding: var(--space-4);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   &__name {
-    font-size: 17px;
+    @include body-text;
+    font-weight: 700;
   }
 
   &__description {
-    margin-top: var(--spacing-xs);
-    font-size: 15px;
+    @include body-text-small;
+    margin-top: var(--space-2);
   }
 
   &__button {
     display: block;
-    padding: 17px 20px;
-    font-size: 16px;
-    font-weight: 700;
     text-align: center;
-    text-decoration: none;
+    padding: var(--space-4);
+    font-size: var(--text-base);
+    font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
     background-color: var(--color-white);
     color: var(--color-text);
-  }
-}
 
-h2 {
-  padding-bottom: var(--spacing-sm);
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
 }

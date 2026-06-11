@@ -1,69 +1,68 @@
+@use '../../mixins' as *;
+
 .price {
   background-color: var(--color-primary);
+  color: var(--color-white);
   text-align: center;
   overflow: hidden;
 
   &__wrapper {
-    padding: var(--spacing-sm) 0;
-
+    padding: var(--space-6) var(--space-4);
     @media (max-width: 768px) {
-      padding: var(--spacing-sm);
+      padding: var(--space-4);
     }
   }
 
   &__list {
-    padding: var(--spacing-xs) 0 var(--spacing-sm);
+    padding: var(--space-4) 0;
   }
 
   &__item {
-    display: grid;
-    grid-template-rows: 0.5fr 0.5fr 2fr 0.5fr 7fr;
-    height: auto;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     background-color: var(--color-white);
+    color: var(--color-text);
     border-radius: var(--radius-sm);
-    padding: var(--spacing-sm);
-    box-sizing: border-box;
+    padding: var(--space-4);
+    height: auto;
+    gap: var(--space-3);
   }
 
   &__title {
-    font-family: var(--font-serif), serif;
-    margin-top: var(--spacing-xs);
-    font-size: 24px;
+    @include heading-3;
   }
 
   &__sum {
-    font-family: var(--font-serif), serif;
-    margin-top: var(--spacing-md);
-    font-size: 30px;
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-top: var(--space-2);
   }
 
   &__description {
-    margin-top: var(--spacing-md);
-    font-size: 17px;
+    @include body-text;
   }
 
   &__result {
-    font-size: 17px;
+    @include body-text;
     font-weight: 700;
-    margin: var(--spacing-md) 0 var(--spacing-xs);
   }
 
   &__result-list {
-    padding-left: 15px;
     margin: 0;
+    padding-left: var(--space-4);
+    list-style: decimal;
   }
 
   &__result-item {
-    font-size: 17px;
-
+    @include body-text-small;
     &::marker {
-      font-family: var(--font-serif), serif;
-      font-size: 14px;
+      font-family: var(--font-serif);
+      font-size: var(--text-sm);
     }
-  }
-
-  &__result-item + &__result-item {
-    margin-top: 5px;
+    & + & {
+      margin-top: var(--space-1);
+    }
   }
 }
