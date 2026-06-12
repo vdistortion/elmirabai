@@ -6,7 +6,7 @@ import { Analytics } from './services/analytics.service';
 })
 export class TrackClickDirective {
   public eventName = input.required<string>({ alias: 'appTrackClick' });
-  public eventParams = input<Record<string, any>>({});
+  public eventParams = input<YMEventParams>({});
   private analytics = inject(Analytics);
 
   @HostListener('click')

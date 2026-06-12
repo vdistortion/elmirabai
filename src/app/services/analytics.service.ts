@@ -1,4 +1,4 @@
-import { DOCUMENT, inject, Injectable, InjectionToken } from '@angular/core';
+import { inject, Injectable, InjectionToken } from '@angular/core';
 
 export const ANALYTICS_CONFIG = new InjectionToken<{ ymId: number }>('AnalyticsConfig');
 
@@ -7,14 +7,12 @@ export const ANALYTICS_CONFIG = new InjectionToken<{ ymId: number }>('AnalyticsC
 })
 export class Analytics {
   private readonly config = inject(ANALYTICS_CONFIG, { optional: true });
-  private readonly _document = inject(DOCUMENT);
-  private readonly _window = this._document.defaultView as any;
 
-  sendEvent(eventName: string, params: Record<string, any> = { category: 'UI' }) {
+  sendEvent(eventName: string, params: YMEventParams) {
     const ymId = this.config?.ymId;
 
-    if (this._window && typeof this._window.ym === 'function') {
-      this._window.ym(ymId, 'reachGoal', eventName, params);
+    if (ymId && window && typeof window.ym === 'function') {
+      window.ym(ymId, 'reachGoal', eventName, params);
       console.info(`[Analytics] Event sent: ${eventName}`, params, ymId);
     }
   }

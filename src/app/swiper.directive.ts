@@ -1,5 +1,6 @@
 import { afterNextRender, Directive, ElementRef, input } from '@angular/core';
 import type { SwiperOptions } from 'swiper/types';
+import type { SwiperContainer } from 'swiper/element';
 
 @Directive({
   selector: '[appSwiper]',
@@ -9,10 +10,8 @@ export class SwiperDirective {
 
   constructor(private el: ElementRef<HTMLElement>) {
     afterNextRender(() => {
-      Object.assign(this.el.nativeElement, this.config());
-
-      // @ts-ignore
-      this.el.nativeElement.initialize();
+      const swiperEl = Object.assign(this.el.nativeElement, this.config()) as SwiperContainer;
+      swiperEl.initialize();
     });
   }
 }

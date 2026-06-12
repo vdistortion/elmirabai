@@ -2,7 +2,6 @@ import {
   afterNextRender,
   Component,
   computed,
-  DOCUMENT,
   type ElementRef,
   inject,
   input,
@@ -21,8 +20,6 @@ import { environment } from '../../../environments/environment';
 export class Videoplayer {
   private readonly loadScript = inject(ScriptLoaderService);
   private readonly sanitizer = inject(DomSanitizer);
-  private readonly _document = inject(DOCUMENT);
-  private readonly _window = this._document.defaultView as any;
 
   public videoId = input.required<number>();
   public oid = input<number>(environment.oid);
@@ -47,8 +44,8 @@ export class Videoplayer {
 
   private initPlayer() {
     const frame = this.iframe()?.nativeElement;
-    if (frame && this._window.VK) {
-      const player = this._window.VK.VideoPlayer(frame);
+    if (frame && window.VK) {
+      const player = window.VK.VideoPlayer(frame);
 
       player.on('inited', () => {
         player.mute();

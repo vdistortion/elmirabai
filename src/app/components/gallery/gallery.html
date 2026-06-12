@@ -5,7 +5,13 @@
       <h3>Отзывы учениц:</h3>
       <swiper-container appSwiper [config]="options" init="false" class="gallery__list">
         <swiper-slide class="gallery__item">
-          <img ngSrc="images/review_course.webp" width="774" height="387" alt="Отзывы учеников" />
+          <img
+            ngSrc="images/review_course.webp"
+            width="774"
+            height="387"
+            loading="lazy"
+            alt="Отзывы учеников"
+          />
           <div class="gallery__content">
             <div class="gallery__content-title">Отзывы учеников 💗</div>
             <div class="gallery__content-text">
@@ -16,7 +22,13 @@
           </div>
         </swiper-slide>
         <swiper-slide class="gallery__item">
-          <img ngSrc="images/review_sofia.webp" width="649" height="486" alt="София" />
+          <img
+            ngSrc="images/review_sofia.webp"
+            width="649"
+            height="486"
+            loading="lazy"
+            alt="София"
+          />
           <div class="gallery__content">
             <div class="gallery__content-title">Отзыв от Софии</div>
             <div class="gallery__content-text">
