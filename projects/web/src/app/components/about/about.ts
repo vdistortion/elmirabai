@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { TrackClickDirective } from '../../track-click.directive';
+import { siteContent } from '../../content/site-content';
 
 @Component({
   selector: 'app-about',
@@ -8,4 +9,6 @@ import { TrackClickDirective } from '../../track-click.directive';
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-export class About {}
+export class About {
+  protected readonly contacts = siteContent.contacts;
+}

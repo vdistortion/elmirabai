@@ -6,7 +6,7 @@ import { Videoplayer } from '../videoplayer/videoplayer';
 import { Icon } from '../icon/icon';
 import { SwiperDirective } from '../../swiper.directive';
 import { TrackClickDirective } from '../../track-click.directive';
-import { environment } from '../../../environments/environment';
+import { siteContent } from '../../content/site-content';
 
 @Component({
   selector: 'app-price',
@@ -16,7 +16,7 @@ import { environment } from '../../../environments/environment';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Price {
-  protected readonly environment = environment;
+  protected readonly contacts = siteContent.contacts;
   protected options: SwiperOptions = {
     modules: [A11y, Keyboard],
     injectStyles: [a11yStyles],

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Icon } from '../icon/icon';
 import { TrackClickDirective } from '../../track-click.directive';
-import { environment } from '../../../environments/environment';
+import { siteContent } from '../../content/site-content';
 
 @Component({
   selector: 'app-description',
@@ -11,5 +11,5 @@ import { environment } from '../../../environments/environment';
   styleUrl: './description.scss',
 })
 export class Description {
-  protected readonly environment = environment;
+  protected readonly contacts = siteContent.contacts;
 }
