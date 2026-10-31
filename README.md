@@ -2,7 +2,7 @@
 
 Блогер-миллионник, профессиональная танцовщица и педагог Belly Dance.
 
-![Эльмира Байрамова](public/images/elmira-about.webp)
+![Эльмира Байрамова](projects/web/public/images/elmira-about.webp)
 
 ## Технологии
 
