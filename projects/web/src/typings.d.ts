@@ -17,7 +17,23 @@ interface YMEventParams {
   placement?: string;
 }
 
+interface YandexMetrika {
+  (
+    ymId: number,
+    command: 'init',
+    options: {
+      webvisor: boolean;
+      clickmap: boolean;
+      accurateTrackBounce: boolean;
+      trackLinks: boolean;
+    },
+  ): void;
+  (ymId: number, command: 'reachGoal', eventName: string, eventParams: YMEventParams): void;
+  a?: unknown[][];
+  l?: number;
+}
+
 interface Window {
   VK?: { VideoPlayer: (iframe: HTMLIFrameElement) => VKVideoPlayer };
-  ym?: (ymId: number, goal: string, eventName: string, eventParams: YMEventParams) => {};
+  ym?: YandexMetrika;
 }

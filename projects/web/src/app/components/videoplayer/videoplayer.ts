@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ScriptLoaderService } from '../../services/script-loader.service';
-import { environment } from '../../../environments/environment';
+import { integrations } from '../../config/integrations';
 
 @Component({
   selector: 'app-videoplayer',
@@ -25,7 +25,7 @@ export class Videoplayer {
 
   public videoId = input.required<number>();
   public title = input.required<string>();
-  public oid = input<number>(environment.oid);
+  public oid = input<number>(integrations.vk.ownerId);
 
   private iframe = viewChild<ElementRef<HTMLIFrameElement>>('videoplayer');
 
