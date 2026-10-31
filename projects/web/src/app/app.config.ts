@@ -1,7 +1,7 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { register } from 'swiper/element/bundle';
+import { register } from 'swiper/element';
 import { routes } from './app.routes';
 import { ANALYTICS_CONFIG } from './services/analytics.service';
 import { environment } from '../environments/environment';
