@@ -10,36 +10,59 @@ export class ScriptLoaderService {
     @Inject(PLATFORM_ID) private platformId: object,
   ) {}
 
-  load(src: string): Promise<HTMLScriptElement> {
+  load(src: string, isReady?: () => boolean): Promise<HTMLScriptElement> {
     if (!isPlatformBrowser(this.platformId)) {
       return Promise.reject(new Error('Script loading attempted on the server'));
     }
 
-    if (this.loaded.has(src)) {
-      return this.loaded.get(src)!;
+    const url = new URL(src, this.document.baseURI).href;
+    const pending = this.loaded.get(url);
+    if (pending) {
+      return pending;
     }
 
-    const existing = this.document.querySelector(
-      `script[src="${src}"]`,
-    ) as HTMLScriptElement | null;
-
-    if (existing) {
+    const existing = Array.from(this.document.scripts).find((script) => script.src === url);
+    if (existing && isReady?.()) {
       return Promise.resolve(existing);
     }
 
+    const script = existing ?? this.document.createElement('script');
     const promise = new Promise<HTMLScriptElement>((resolve, reject) => {
-      const script = this.document.createElement('script');
-      script.src = src;
-      script.async = true;
-      script.defer = true;
+      const cleanup = () => {
+        clearTimeout(timeout);
+        script.removeEventListener('load', onLoad);
+        script.removeEventListener('error', onError);
+      };
+      const fail = (message: string) => {
+        cleanup();
+        script.remove();
+        reject(new Error(message));
+      };
+      const onLoad = () => {
+        if (isReady && !isReady()) {
+          fail(`Script loaded without the expected API: ${url}`);
+          return;
+        }
+        cleanup();
+        resolve(script);
+      };
+      const onError = () => fail(`Failed to load script: ${url}`);
+      const timeout = setTimeout(() => fail(`Script loading timed out: ${url}`), 15_000);
 
-      script.onload = () => resolve(script);
-      script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+      script.addEventListener('load', onLoad, { once: true });
+      script.addEventListener('error', onError, { once: true });
 
-      this.document.head.appendChild(script);
+      if (!existing) {
+        script.src = url;
+        script.async = true;
+        this.document.head.appendChild(script);
+      }
+    }).catch((error: unknown) => {
+      this.loaded.delete(url);
+      throw error;
     });
 
-    this.loaded.set(src, promise);
+    this.loaded.set(url, promise);
 
     return promise;
   }

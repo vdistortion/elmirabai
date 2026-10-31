@@ -2,6 +2,7 @@ import {
   afterNextRender,
   Component,
   computed,
+  DestroyRef,
   type ElementRef,
   inject,
   input,
@@ -20,6 +21,7 @@ import { environment } from '../../../environments/environment';
 export class Videoplayer {
   private readonly loadScript = inject(ScriptLoaderService);
   private readonly sanitizer = inject(DomSanitizer);
+  private readonly destroyRef = inject(DestroyRef);
 
   public videoId = input.required<number>();
   public oid = input<number>(environment.oid);
@@ -34,9 +36,11 @@ export class Videoplayer {
   constructor() {
     afterNextRender(() => {
       this.loadScript
-        .load('https://vk.com/js/api/videoplayer.js')
+        .load('https://vk.com/js/api/videoplayer.js', () => !!window.VK?.VideoPlayer)
         .then(() => {
-          this.initPlayer();
+          if (!this.destroyRef.destroyed) {
+            this.initPlayer();
+          }
         })
         .catch(console.error);
     });
