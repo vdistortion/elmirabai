@@ -1,7 +1,7 @@
 :root {
   --color-primary: #7d3c4a;
   --color-bg: #f4d8de;
-  --color-accent-pink: #dd8b9c;
+  --color-accent-pink: #a94f65;
   --color-text: #7d3c4a;
   --color-white: #ffffff;
   --radius-sm: 5px;
@@ -99,11 +99,11 @@ img {
   }
 
   &--tg {
-    background-color: #61a8de;
+    background-color: #216fa8;
   }
 
   &--ig {
-    background-color: #f00075;
+    background-color: #d60068;
   }
 
   .btn__icon {
@@ -115,6 +115,17 @@ img {
     flex-grow: 1;
     text-align: center;
   }
+}
+
+.video-placeholder {
+  width: 100%;
+  max-width: 375px;
+  aspect-ratio: 125 / 222;
+  background-color: #eee;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sr-only {

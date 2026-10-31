@@ -2,18 +2,12 @@
   <div class="wrapper">
     <div class="price__wrapper">
       @defer (on viewport) {
-        <app-videoplayer [videoId]="456239432"></app-videoplayer>
+        <app-videoplayer
+          [videoId]="456239432"
+          title="О курсе «Женственность через танец»"
+        ></app-videoplayer>
       } @placeholder {
-        <div
-          style="
-            max-width: 375px;
-            aspect-ratio: 125/222;
-            background: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          "
-        >
+        <div class="video-placeholder">
           <span>Загрузка видео...</span>
         </div>
       }
@@ -92,7 +86,6 @@
         class="btn btn--tg"
         [href]="environment.contacts.tg"
         target="_blank"
-        aria-label="Telegram Эльмиры"
         rel="noopener noreferrer"
         appTrackClick="buy_click"
         [eventParams]="{ placement: 'price_section' }"

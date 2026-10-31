@@ -24,6 +24,7 @@ export class Videoplayer {
   private readonly destroyRef = inject(DestroyRef);
 
   public videoId = input.required<number>();
+  public title = input.required<string>();
   public oid = input<number>(environment.oid);
 
   private iframe = viewChild<ElementRef<HTMLIFrameElement>>('videoplayer');
