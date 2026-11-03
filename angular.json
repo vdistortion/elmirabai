@@ -66,6 +66,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "prebundle": {
+              "exclude": ["swiper/element/css/navigation", "swiper/element/css/a11y"]
+            }
+          },
           "configurations": {
             "production": {
               "buildTarget": "web:build:production"
