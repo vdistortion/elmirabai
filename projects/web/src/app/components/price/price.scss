@@ -7,14 +7,13 @@
   overflow: hidden;
 
   &__wrapper {
-    padding: var(--space-6) var(--space-4);
-    @media (max-width: 768px) {
-      padding: var(--space-4);
-    }
-  }
+    display: flex;
+    justify-content: center;
+    padding: var(--space-4);
 
-  &__list {
-    padding: var(--space-4) 0;
+    @media (min-width: 768px) {
+      padding: var(--space-6) 0;
+    }
   }
 
   &__item {
